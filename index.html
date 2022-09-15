@@ -1,51 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Interactive card details form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="./src/assets/icons/favicon-32x32.png" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Space+Grotesk:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/style.css">
+
 </head>
+
 <body>
+  <div class="card">
+    <div class="card__frontCard">
+      <span class="card__frontCard-circle"></span>
+      <img src="./src/assets/bg-card-front.png" alt="frontCard">
+      <span class="card__frontCard-information" id="numberOfCard" class="">0000 0000 0000 0000</span>
+      <div class="card__frontCard-bottominfo">
+        <div id="personName" class="card__frontCard-name">
+          Alvin yakitori
+        </div>
+        <div  class="card__frontCard-expDate">
+          <span id="MM">00</span>/<span id="YY">00</span>
+        </div>
+      </div>
+    </div>
+    <div class="card__backCard">
+      <img src="./src/assets/bg-card-back.png" alt="backCard">
+      <span id="CVC-text" class="card__backCard-CVC">000</span>
+    </div>
+    <picture>
+      <source media="(max-width:176px)" srcset="./src/assets/mobile/bg-main-mobile.png">
+      <img class="card__leftFace" src="./src/assets/desktop/bg-main-desktop.png" alt="bg-Main">
+    </picture>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <div class="card__rightFace">
+      <form class="card__container">
 
-  000
+        <div class="card__container-form">
+          <label class="card__label" for="cardName">
+            cardholder name
+          </label>
+          <input id="cardName" name="cardName" maxlength="26" class="card__input" type="text"
+            placeholder="e.g. Jane Applessed" id="cardName">
+        </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+        <div class="card__container-form">
+          <label class="card__label" for="cardName">
+            card Number
+          </label>
+          <input id="cardNumber" name="cardNumber" class="card__input" type="text"
+            placeholder="e.g 1234 5678 9123 0000">
+        </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+        <div class="card__container-date">
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+          <div class="card__container-form card__container-form-3">
+            <label class="card__label card__label-size" for="cardName">
+              exp. date (MM/YY)
+            </label>
+            <input id="expMM" class="card__input-size card__input" name="expDateMM" maxlength="2" type="text"
+              placeholder="MM" id="cardName">
 
-  CVC
-  e.g. 123
+            <input id="expYY" class="card__input-size card__input" name="expDateYY" maxlength="2" type="text"
+              placeholder="YY" id="cardName">
+          </div>
 
-  Confirm
+          <div class="card__container-form card__container-form-4">
+            <label class="card__label" for="cardName">
+              CVC
+            </label>
+            <input id="CVC" class="card__input card__input-CVC" name="CVC" maxlength="3" type="text"
+              placeholder="e.g 123" id="cardName">
+          </div>
+        </div>
 
-  <!-- Completed state start -->
+        <button class="card__button">Confirm</button>
 
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      </form>
+    </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
+    integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="./main.js"></script>
 </body>
+
 </html>

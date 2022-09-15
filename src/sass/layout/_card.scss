@@ -1,0 +1,148 @@
+@import "../abstract/mixins";
+
+.card {
+  display: flex;
+  position: relative;
+
+  &__frontCard {
+    position: absolute;
+    top: 164px;
+    left: calc(100vw / 3 - 372px);
+
+    &-bottominfo {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      position: absolute;
+      top: 14rem;
+    }
+
+    &-information {
+      position: absolute;
+      top: 10rem;
+      left: 2.5rem;
+      color: $White;
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+    }
+
+    &-name {
+      color: $White;
+      letter-spacing: 0.2rem;
+    }
+
+    &-expDate {
+      color: $White;
+      letter-spacing: 0.2rem;
+    }
+
+    &-circle {
+      width: 2rem;
+      background-color: $White;
+      height: 2rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+
+      &::after {
+        content: "";
+        width: 64%;
+        height: 64%;
+        background-color: transparent;
+        left: 39px;
+        border: 0.1rem solid $White;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+      }
+    }
+  }
+
+  &__backCard {
+    position: absolute;
+    left: calc(100vw / 3 + -228px);
+    top: 29rem;
+
+    &-information {
+      position: absolute;
+    }
+    &-CVC {
+      position: absolute;
+      color: $White;
+      letter-spacing: 0.2rem;
+      top: 7.49rem;
+      left: 23.5rem;
+    }
+  }
+
+  &__leftFace {
+    height: 100vh;
+    width: calc(100vw / 3);
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__container {
+    width: 29rem;
+  }
+
+  &__container-form {
+    margin-bottom: 0.5rem;
+  }
+
+  &__label {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+  }
+
+  &__rightFace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+    border: 0.1rem solid $LightGrayish;
+
+    &::placeholder {
+      color: darken($LightGrayish, 10);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &-size {
+      width: 4rem;
+      height: 2.5rem;
+    }
+
+    &-CVC {
+      // width: 9rem;
+      padding: 0.6rem;
+    }
+  }
+
+  &__container-date {
+    display: flex;
+  }
+
+  &__container-form-4 {
+    margin-left: 1.5rem;
+    width: 58%;
+  }
+
+  &__button {
+    @include button(100%, 1rem, $VeryDark);
+  }
+}
