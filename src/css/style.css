@@ -380,13 +380,25 @@ body {
       left: 23.5rem; }
   .card__leftFace {
     height: 100vh;
-    width: calc(100vw / 3); }
+    width: calc(100vw / 3);
+    margin-right: 18.6rem; }
   .card__label {
     display: block; }
   .card__container {
     width: 29rem; }
   .card__container-form {
-    margin-bottom: 0.5rem; }
+    margin-bottom: 1.7rem;
+    position: relative; }
+    .card__container-form::after {
+      content: attr(data-error);
+      position: absolute;
+      width: 100%;
+      color: red;
+      top: 5.2rem;
+      left: 0;
+      text-transform: capitalize;
+      font-size: 0.75rem;
+      font-weight: 800; }
   .card__label {
     font-size: 1rem;
     margin-bottom: 0.4rem;
@@ -402,29 +414,59 @@ body {
     box-sizing: border-box;
     width: 100%;
     padding: 1rem;
-    border: 0.1rem solid #dedddf; }
+    border: 0.1rem solid #dedddf;
+    border-radius: 0.4rem;
+    font-weight: 600; }
     .card__input::placeholder {
       color: #c4c3c6; }
     .card__input:focus {
       outline: none; }
     .card__input-size {
-      width: 4rem;
-      height: 2.5rem; }
-    .card__input-CVC {
-      padding: 0.6rem; }
+      width: 5rem; }
   .card__container-date {
-    display: flex; }
+    display: flex;
+    position: relative; }
   .card__container-form-4 {
-    margin-left: 1.5rem;
-    width: 58%; }
+    margin-left: 0.5rem;
+    width: 58%;
+    position: relative; }
   .card__button {
     width: 100%;
     padding: 1rem;
     background-color: #21092f;
     margin-top: 1.5rem;
     color: white;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     font-size: 1.1rem;
     border: none; }
     .card__button:hover {
+      cursor: pointer; }
+  .card__error {
+    border: 0.1rem solid #ff5252;
+    position: realative; }
+
+.payCard {
+  width: 29rem; }
+  .payCard__img {
+    text-align: center;
+    margin-bottom: 1.5rem; }
+  .payCard__title {
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 1.5rem; }
+  .payCard__subtitle {
+    font-size: 0.8rem;
+    color: #8e8593;
+    text-align: center; }
+  .payCard__button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #21092f;
+    margin-top: 1.5rem;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    border: none; }
+    .payCard__button:hover {
       cursor: pointer; }

@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <div class="card">
+  <main class="card">
     <div class="card__frontCard">
       <span class="card__frontCard-circle"></span>
       <img src="./src/assets/bg-card-front.png" alt="frontCard">
@@ -31,7 +31,7 @@
         <div id="personName" class="card__frontCard-name">
           Alvin yakitori
         </div>
-        <div  class="card__frontCard-expDate">
+        <div class="card__frontCard-expDate">
           <span id="MM">00</span>/<span id="YY">00</span>
         </div>
       </div>
@@ -46,13 +46,13 @@
     </picture>
 
     <div class="card__rightFace">
-      <form class="card__container">
+      <form id="form" class="card__container">
 
-        <div class="card__container-form">
+        <div class="card__container-form" data-error="">
           <label class="card__label" for="cardName">
             cardholder name
           </label>
-          <input id="cardName" name="cardName" maxlength="26" class="card__input" type="text"
+          <input autocomplete="off" id="cardName" name="cardName" maxlength="26" class="card__input" type="text"
             placeholder="e.g. Jane Applessed" id="cardName">
         </div>
 
@@ -70,27 +70,34 @@
             <label class="card__label card__label-size" for="cardName">
               exp. date (MM/YY)
             </label>
-            <input id="expMM" class="card__input-size card__input" name="expDateMM" maxlength="2" type="text"
-              placeholder="MM" id="cardName">
+            <input id="expMM" class="card__input-size card__input " name="expMM" maxlength="2" type="text"
+              placeholder="MM">
 
-            <input id="expYY" class="card__input-size card__input" name="expDateYY" maxlength="2" type="text"
-              placeholder="YY" id="cardName">
+            <input id="expYY" class="card__input-size card__input " name="expYY" maxlength="2" type="text"
+              placeholder="YY">
           </div>
 
           <div class="card__container-form card__container-form-4">
             <label class="card__label" for="cardName">
               CVC
             </label>
-            <input id="CVC" class="card__input card__input-CVC" name="CVC" maxlength="3" type="text"
-              placeholder="e.g 123" id="cardName">
+            <input id="CVC" class="card__input card__input-CVC " name="CVC" maxlength="3" type="text"
+              placeholder="e.g 123">
           </div>
         </div>
 
         <button class="card__button">Confirm</button>
-
       </form>
+      <div hidden id="payCard" class="payCard">
+        <div class="payCard__img">
+          <img src="./src/assets/icons/icon-complete.svg" alt="complete">
+        </div>
+        <div class="payCard__title ">thank you!</div>
+        <div class="payCard__subtitle">We've added your card details</div>
+        <button id="confirmButton" class="payCard__button">Continue</button>
+      </div>
     </div>
-  </div>
+  </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>

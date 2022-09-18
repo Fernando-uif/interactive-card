@@ -1,0 +1,20 @@
+.payCard {
+  width: 29rem;
+  &__img {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  &__title {
+    text-align: center;
+    @include title;
+    margin-bottom: 1.5rem;
+  }
+  &__subtitle {
+    @include subtitle;
+    text-align: center;
+  }
+  &__button {
+    @include button(100%, 1rem, $VeryDark);
+  }
+}
+ 

@@ -1,14 +1,23 @@
 @mixin button($width, $padding, $bgColor) {
-    width: $width;
-    padding: $padding;
-    background-color: $bgColor;
-    margin-top: 1.5rem;
-    color: $White;
-    border-radius: .5rem;
-    font-size: 1.1rem;
-    border: none;
+  width: $width;
+  padding: $padding;
+  background-color: $bgColor;
+  margin-top: 1.5rem;
+  color: $White;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  border: none;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
+}
+@mixin title {
+  font-size: 1.6rem;
+  letter-spacing: 0.4rem;
+}
+
+@mixin subtitle {
+  font-size: 0.8rem;
+  color: $DarkGrayish;
 }

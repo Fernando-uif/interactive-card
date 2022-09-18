@@ -79,6 +79,7 @@
   &__leftFace {
     height: 100vh;
     width: calc(100vw / 3);
+    margin-right: 18.6rem;
   }
 
   &__label {
@@ -90,7 +91,19 @@
   }
 
   &__container-form {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.7rem;
+    position: relative;
+    &::after {
+      content: attr(data-error);
+      position: absolute;
+      width: 100%;
+      color: red;
+      top: 5.2rem;
+      left: 0;
+      text-transform: capitalize;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
   }
 
   &__label {
@@ -113,7 +126,8 @@
     width: 100%;
     padding: 1rem;
     border: 0.1rem solid $LightGrayish;
-
+    border-radius: 0.4rem;
+    font-weight: 600;
     &::placeholder {
       color: darken($LightGrayish, 10);
     }
@@ -123,26 +137,26 @@
     }
 
     &-size {
-      width: 4rem;
-      height: 2.5rem;
-    }
-
-    &-CVC {
-      // width: 9rem;
-      padding: 0.6rem;
+      width: 5rem;
     }
   }
 
   &__container-date {
     display: flex;
+    position: relative;
   }
 
   &__container-form-4 {
-    margin-left: 1.5rem;
+    margin-left: 0.5rem;
     width: 58%;
+    position: relative;
   }
 
   &__button {
     @include button(100%, 1rem, $VeryDark);
+  }
+  &__error {
+    border: 0.1rem solid $color-error;
+    position: realative;
   }
 }
