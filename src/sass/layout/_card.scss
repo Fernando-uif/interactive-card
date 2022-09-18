@@ -1,13 +1,39 @@
 @import "../abstract/mixins";
-
+@import "../abstract/breakPoints";
 .card {
   display: flex;
   position: relative;
-
+  & {
+    @media screen and (max-width: $screenXxs) {
+      flex-direction: column;
+    }
+  }
   &__frontCard {
     position: absolute;
     top: 164px;
     left: calc(100vw / 3 - 372px);
+    & {
+      @media screen and (max-width: $screenS) {
+        left: calc(100vw / 3 - 214px);
+      }
+      @media screen and (max-width: $screenXs) {
+        display: none;
+      }
+      @media screen and (max-width: $screenXxs) {
+        display: block;
+        left: calc(100vw / 3 - 57px);
+        top: 6.33rem;
+        z-index: 20;
+      }
+    }
+    &-size {
+      @media screen and (max-width: $screenS) {
+        width: 19rem;
+      }
+      @media screen and (max-width: $screenXxs) {
+        width: 14rem;
+      }
+    }
 
     &-bottominfo {
       display: flex;
@@ -15,6 +41,16 @@
       width: 100%;
       position: absolute;
       top: 14rem;
+      & {
+        @media screen and (max-width: $screenS) {
+          font-size: 1rem;
+          top: 8rem;
+        }
+        @media screen and (max-width: $screenXxs) {
+          font-size: 0.6rem;
+          top: 6.4rem;
+        }
+      }
     }
 
     &-information {
@@ -24,6 +60,17 @@
       color: $White;
       font-size: 1.5rem;
       letter-spacing: 0.2rem;
+      & {
+        @media screen and (max-width: $screenS) {
+          font-size: 1rem;
+          top: 6rem;
+          left: 1rem;
+        }
+        @media screen and (max-width: $screenXxs) {
+          font-size: 0.77rem;
+          top: 5rem;
+        }
+      }
     }
 
     &-name {
@@ -61,8 +108,26 @@
 
   &__backCard {
     position: absolute;
-    left: calc(100vw / 3 + -228px);
+    left: calc(100vw / 3 + -214px);
     top: 29rem;
+    & {
+      @media screen and (max-width: $screenXs) {
+        display: none;
+      }
+      @media screen and (max-width: $screenXxs) {
+        display: block;
+        left: calc(100vw / 3 + -17px);
+        top: 2rem;
+      }
+    }
+    &-size {
+      @media screen and (max-width: $screenS) {
+        width: 19rem;
+      }
+      @media screen and (max-width: $screenXxs) {
+        width: 14rem;
+      }
+    }
 
     &-information {
       position: absolute;
@@ -73,13 +138,36 @@
       letter-spacing: 0.2rem;
       top: 7.49rem;
       left: 23.5rem;
+      & {
+        @media screen and (max-width: $screenS) {
+          top: 4.49rem;
+          left: 14.5rem;
+        }
+        @media screen and (max-width: $screenXxs) {
+          top: 3.4rem;
+          left: 10.4rem;
+          font-size: 0.77rem;
+        }
+      }
     }
   }
 
   &__leftFace {
     height: 100vh;
     width: calc(100vw / 3);
-    margin-right: 18.6rem;
+    margin-right: 15.6rem;
+    & {
+      @media screen and (max-width: $screenS) {
+        margin-right: 0;
+      }
+      @media screen and (max-width: $screenXxs) {
+        height: 15rem;
+        width: 100vw;
+      }
+      @media screen and (max-width: $screenXxs) {
+        margin-bottom: 4rem;
+      }
+    }
   }
 
   &__label {
@@ -88,6 +176,14 @@
 
   &__container {
     width: 29rem;
+    & {
+      @media screen and (max-width: $screenS) {
+        width: 22rem;
+      }
+      @media screen and (max-width: $screenXs) {
+        width: 17rem;
+      }
+    }
   }
 
   &__container-form {
@@ -111,6 +207,23 @@
     margin-bottom: 0.4rem;
     letter-spacing: 0.1rem;
     font-weight: 600;
+    & {
+      @media screen and (max-width: $screenS) {
+        font-size: 0.7rem;
+      }
+    }
+    &-size {
+      @media screen and (max-width: $screenXs) {
+        width: 8rem;
+      }
+    }
+    &-CVC {
+      & {
+        @media screen and (max-width: $screenXs) {
+          // margin-bottom: 1.4rem;
+        }
+      }
+    }
   }
 
   &__rightFace {
@@ -138,6 +251,11 @@
 
     &-size {
       width: 5rem;
+      & {
+        @media screen and (max-width: $screenS) {
+          width: 3.5rem;
+        }
+      }
     }
   }
 

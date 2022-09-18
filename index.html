@@ -25,7 +25,7 @@
   <main class="card">
     <div class="card__frontCard">
       <span class="card__frontCard-circle"></span>
-      <img src="./src/assets/bg-card-front.png" alt="frontCard">
+      <img class="card__frontCard-size" src="./src/assets/bg-card-front.png" alt="frontCard">
       <span class="card__frontCard-information" id="numberOfCard" class="">0000 0000 0000 0000</span>
       <div class="card__frontCard-bottominfo">
         <div id="personName" class="card__frontCard-name">
@@ -37,11 +37,11 @@
       </div>
     </div>
     <div class="card__backCard">
-      <img src="./src/assets/bg-card-back.png" alt="backCard">
+      <img class="card__backCard-size" src="./src/assets/bg-card-back.png" alt="backCard">
       <span id="CVC-text" class="card__backCard-CVC">000</span>
     </div>
     <picture>
-      <source media="(max-width:176px)" srcset="./src/assets/mobile/bg-main-mobile.png">
+      <source media="(max-width:425px)" srcset="./src/assets/mobile/bg-main-mobile.png">
       <img class="card__leftFace" src="./src/assets/desktop/bg-main-desktop.png" alt="bg-Main">
     </picture>
 
@@ -49,7 +49,7 @@
       <form id="form" class="card__container">
 
         <div class="card__container-form" data-error="">
-          <label class="card__label" for="cardName">
+          <label class="card__label " for="cardName">
             cardholder name
           </label>
           <input autocomplete="off" id="cardName" name="cardName" maxlength="26" class="card__input" type="text"
@@ -78,7 +78,7 @@
           </div>
 
           <div class="card__container-form card__container-form-4">
-            <label class="card__label" for="cardName">
+            <label class="card__label card__label-CVC" for="cardName">
               CVC
             </label>
             <input id="CVC" class="card__input card__input-CVC " name="CVC" maxlength="3" type="text"

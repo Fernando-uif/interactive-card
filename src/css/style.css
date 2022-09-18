@@ -325,16 +325,45 @@ body {
 .card {
   display: flex;
   position: relative; }
+  @media screen and (max-width: 426px) {
+    .card {
+      flex-direction: column; } }
   .card__frontCard {
     position: absolute;
     top: 164px;
     left: calc(100vw / 3 - 372px); }
+    @media screen and (max-width: 1096px) {
+      .card__frontCard {
+        left: calc(100vw / 3 - 214px); } }
+    @media screen and (max-width: 768px) {
+      .card__frontCard {
+        display: none; } }
+    @media screen and (max-width: 426px) {
+      .card__frontCard {
+        display: block;
+        left: calc(100vw / 3 - 57px);
+        top: 6.33rem;
+        z-index: 20; } }
+    @media screen and (max-width: 1096px) {
+      .card__frontCard-size {
+        width: 19rem; } }
+    @media screen and (max-width: 426px) {
+      .card__frontCard-size {
+        width: 14rem; } }
     .card__frontCard-bottominfo {
       display: flex;
       justify-content: space-around;
       width: 100%;
       position: absolute;
       top: 14rem; }
+      @media screen and (max-width: 1096px) {
+        .card__frontCard-bottominfo {
+          font-size: 1rem;
+          top: 8rem; } }
+      @media screen and (max-width: 426px) {
+        .card__frontCard-bottominfo {
+          font-size: 0.6rem;
+          top: 6.4rem; } }
     .card__frontCard-information {
       position: absolute;
       top: 10rem;
@@ -342,6 +371,15 @@ body {
       color: white;
       font-size: 1.5rem;
       letter-spacing: 0.2rem; }
+      @media screen and (max-width: 1096px) {
+        .card__frontCard-information {
+          font-size: 1rem;
+          top: 6rem;
+          left: 1rem; } }
+      @media screen and (max-width: 426px) {
+        .card__frontCard-information {
+          font-size: 0.77rem;
+          top: 5rem; } }
     .card__frontCard-name {
       color: white;
       letter-spacing: 0.2rem; }
@@ -368,8 +406,22 @@ body {
         top: 5%; }
   .card__backCard {
     position: absolute;
-    left: calc(100vw / 3 + -228px);
+    left: calc(100vw / 3 + -214px);
     top: 29rem; }
+    @media screen and (max-width: 768px) {
+      .card__backCard {
+        display: none; } }
+    @media screen and (max-width: 426px) {
+      .card__backCard {
+        display: block;
+        left: calc(100vw / 3 + -17px);
+        top: 2rem; } }
+    @media screen and (max-width: 1096px) {
+      .card__backCard-size {
+        width: 19rem; } }
+    @media screen and (max-width: 426px) {
+      .card__backCard-size {
+        width: 14rem; } }
     .card__backCard-information {
       position: absolute; }
     .card__backCard-CVC {
@@ -378,14 +430,39 @@ body {
       letter-spacing: 0.2rem;
       top: 7.49rem;
       left: 23.5rem; }
+      @media screen and (max-width: 1096px) {
+        .card__backCard-CVC {
+          top: 4.49rem;
+          left: 14.5rem; } }
+      @media screen and (max-width: 426px) {
+        .card__backCard-CVC {
+          top: 3.4rem;
+          left: 10.4rem;
+          font-size: 0.77rem; } }
   .card__leftFace {
     height: 100vh;
     width: calc(100vw / 3);
-    margin-right: 18.6rem; }
+    margin-right: 15.6rem; }
+    @media screen and (max-width: 1096px) {
+      .card__leftFace {
+        margin-right: 0; } }
+    @media screen and (max-width: 426px) {
+      .card__leftFace {
+        height: 15rem;
+        width: 100vw; } }
+    @media screen and (max-width: 426px) {
+      .card__leftFace {
+        margin-bottom: 4rem; } }
   .card__label {
     display: block; }
   .card__container {
     width: 29rem; }
+    @media screen and (max-width: 1096px) {
+      .card__container {
+        width: 22rem; } }
+    @media screen and (max-width: 768px) {
+      .card__container {
+        width: 17rem; } }
   .card__container-form {
     margin-bottom: 1.7rem;
     position: relative; }
@@ -404,6 +481,12 @@ body {
     margin-bottom: 0.4rem;
     letter-spacing: 0.1rem;
     font-weight: 600; }
+    @media screen and (max-width: 1096px) {
+      .card__label {
+        font-size: 0.7rem; } }
+    @media screen and (max-width: 768px) {
+      .card__label-size {
+        width: 8rem; } }
   .card__rightFace {
     display: flex;
     justify-content: center;
@@ -423,6 +506,9 @@ body {
       outline: none; }
     .card__input-size {
       width: 5rem; }
+      @media screen and (max-width: 1096px) {
+        .card__input-size {
+          width: 3.5rem; } }
   .card__container-date {
     display: flex;
     position: relative; }
@@ -447,6 +533,9 @@ body {
 
 .payCard {
   width: 29rem; }
+  @media screen and (max-width: 768px) {
+    .payCard {
+      width: 19rem; } }
   .payCard__img {
     text-align: center;
     margin-bottom: 1.5rem; }
