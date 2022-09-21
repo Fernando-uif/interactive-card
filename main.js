@@ -7,7 +7,6 @@ import {
 
 $(function ($) {
   $("#cardNumber").mask("9999 9999 9999 9999", { placeholder: " " });
-  console.log("pasando por aqui");
 });
 
 writeJustNumbers();

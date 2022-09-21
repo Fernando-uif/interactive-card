@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABO1BMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////l9Pff8fS54ein2eOn2eL9/v684unr9vj7/f7c8PSl2eKHzNil2OLv+Prz+vue1eB3xdOq2uPm9Pf29/vy8/n3/Py13+eEyteZ097P6u/2+/zByeKOm8r8/f7u+Pq+4+qOz9uU0dzo9fjb4O5meLbh5fH0+vvV7fHx+fv8/P2Gk8Wbps+44eim2eLW2+xkdrXO1Oit3OWttthperja3u7u+Pn6+/2hrNJneLfFy+P7+/23v92IlcbN0ufx8/nj5/Kbp9BsfbltfrqAj8ORnsvg5PD+/v/v8ffQ1em0vduqtNfn6vS/61TcAAAAHHRSTlMAAAQqbK3Z8v0DN5ff+xqJ6jbC/kHBAjjp3qz8qSKHsgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfiChMPAx5FOtlkAAABSUlEQVQ4y4WTZ2OCMBCGc4IMEXAPjB10771t7dLuXbv3/v+/oNigIYjN+4HcJU9CcgMhVxASxLAkK4oshUUhBIgVqBEtqmNXelSLqF4EwDBjmFHMNADoejyRxD4lE/EGAZCScICkFCGc/YHrDkHOACON2yhtOABkTNxWZgYQZHPeqWKH18tlAakas6ezi3E1FQl5Fuhm3LyARD0AsIs9vSSmIrJwC9DXPzA4NEx8C0ktwMjo2PiE3YgFkokxOdUEpmdm5+YXXEBGCjEWl5bpHVZKq2tlMq+gAjHWNza9r9jarpD5QuMX1Z3dv3Fvn72T3LzkweFRfSgd+xJGn3lyeuZ8K+csYNFAXVzWrqr+bDmBoqG+vqnd3t3bDOCE2push8en55fXNzZZTLrfPz6/vn+oX083t2C4JccvWm7Z8xuH33r85v2v/X8Bp/FiyVLnL/0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTAtMTlUMTU6MDM6MzArMDI6MDCzEaEaAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEwLTE5VDE1OjAzOjMwKzAyOjAwwkwZpgAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Space+Grotesk:wght@500&display=swap"
+    rel="stylesheet">
+  
+
+  <script type="module" crossorigin src="/assets/index.7f3b810b.js"></script>
+  <link rel="stylesheet" href="/assets/index.7bd74363.css">
+</head>
+
+<body>
+  <main class="card">
+    <div class="card__frontCard">
+      <span class="card__frontCard-circle"></span>
+      <img class="card__frontCard-size" src="/assets/bg-card-front.5aca8db4.png" alt="frontCard">
+      <span class="card__frontCard-information" id="numberOfCard" class="">0000 0000 0000 0000</span>
+      <div class="card__frontCard-bottominfo">
+        <div id="personName" class="card__frontCard-name">
+          Alvin yakitori
+        </div>
+        <div class="card__frontCard-expDate">
+          <span id="MM">00</span>/<span id="YY">00</span>
+        </div>
+      </div>
+    </div>
+    <div class="card__backCard">
+      <img class="card__backCard-size" src="/assets/bg-card-back.503939c0.png" alt="backCard">
+      <span id="CVC-text" class="card__backCard-CVC">000</span>
+    </div>
+    <picture>
+      <source media="(max-width:425px)" srcset="/assets/bg-main-mobile.9e839c55.png ">
+      <img class="card__leftFace" src="/assets/bg-main-desktop.8bf4510a.png" alt="bg-Main">
+    </picture>
+
+    <div class="card__rightFace">
+      <form id="form" class="card__container">
+
+        <div class="card__container-form" data-error="">
+          <label class="card__label " for="cardName">
+            cardholder name
+          </label>
+          <input autocomplete="off" id="cardName" name="cardName" maxlength="26" class="card__input" type="text"
+            placeholder="e.g. Jane Applessed" id="cardName">
+        </div>
+
+        <div class="card__container-form">
+          <label class="card__label" for="cardName">
+            card Number
+          </label>
+          <input id="cardNumber" name="cardNumber" class="card__input" type="text"
+            placeholder="e.g 1234 5678 9123 0000">
+        </div>
+
+        <div class="card__container-date">
+
+          <div class="card__container-form card__container-form-3">
+            <label class="card__label card__label-size" for="cardName">
+              exp. date (MM/YY)
+            </label>
+            <input id="expMM" class="card__input-size card__input " name="expMM" maxlength="2" type="text"
+              placeholder="MM">
+
+            <input id="expYY" class="card__input-size card__input " name="expYY" maxlength="2" type="text"
+              placeholder="YY">
+          </div>
+
+          <div class="card__container-form card__container-form-4">
+            <label class="card__label card__label-CVC" for="cardName">
+              CVC
+            </label>
+            <input id="CVC" class="card__input card__input-CVC " name="CVC" maxlength="3" type="text"
+              placeholder="e.g 123">
+          </div>
+        </div>
+
+        <button class="card__button">Confirm</button>
+      </form>
+      <div hidden id="payCard" class="payCard">
+        <div class="payCard__img">
+          <img src="/assets/icon-complete.0e154f18.svg" alt="complete">
+        </div>
+        <div class="payCard__title ">thank you!</div>
+        <div class="payCard__subtitle">We've added your card details</div>
+        <button id="confirmButton" class="payCard__button">Continue</button>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
+    integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+</body>
+
+</html>
