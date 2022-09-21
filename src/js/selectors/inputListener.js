@@ -32,5 +32,10 @@ export const inputListener = () => {
     Object.keys(data).map((key) => {
       document.querySelector(`#${key}`).value = "";
     });
+    document.querySelector("#numberOfCard").innerHTML = "0000 0000 0000 0000";
+    document.querySelector("#personName").innerHTML = "Alvin Yakitori";
+    document.querySelector("#MM").innerHTML = "00";
+    document.querySelector("#YY").innerHTML = "00";
+    document.querySelector("#CVC-text").innerHTML = "000";
   });
 };
