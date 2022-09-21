@@ -526,7 +526,8 @@ body {
     font-size: 1.1rem;
     border: none; }
     .card__button:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: #4e156f; }
   .card__error {
     border: 0.1rem solid #ff5252;
     position: realative; }
@@ -558,4 +559,5 @@ body {
     font-size: 1.1rem;
     border: none; }
     .payCard__button:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: #4e156f; }
